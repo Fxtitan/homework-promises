@@ -5,6 +5,17 @@
 // create a variable randomNum that creates a random number between 1 and 20
 // use it as your argument to invoke your compareToTen function
 
+const compareToTen = (num) => {
+  if (num >= 10) {
+    return console.log(resolve(`${num} is greater than or equal to 10, resolved!`)) 
+
+  } else if (num < 10) {
+    return console.log(`${num} is less than 10, error!`)
+
+  }
+}
+compareToTen()
+
 //2.
 // create a global variable called order. It will hold a string with whatever drink you want to order, for example, a 'Slurpy'
 //create a promise called drink
@@ -30,6 +41,23 @@
 // reject output in terminal should be
 // Server says: "I'll be right back with your Slurpy"
 // Sever returns: "Sorry, We are all out of Slurpy"
+
+let order = `${drink}`
+let orderCannotBeFilled = false
+let drink = new Promise (
+  function (resolve, reject) {
+
+    if (orderCannotBeFilled === true) {
+      let reason = new Error (setTimeout(function(){ console.log((`Sorry we are all out of ${order}`)) }, 2000))
+      reject(reason)
+
+    }
+    `'I'll be right back with your ${order}`
+  }
+  
+  
+  
+)
 
 //3.CHAIN
 //Write two separate functions that return promises
